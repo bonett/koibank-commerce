@@ -1,9 +1,14 @@
 import { CustomThemeInterface } from "../models/theme.model";
-import { Colors, Fonts } from '../constants';
+import { Colors, Fonts, Gradients, Shadows } from '../constants';
 
 export const KoiBankTheme: CustomThemeInterface = {
   body: Colors.white,
   bgMain: Colors.gray10,
   textColor: Colors.gray100,
-  fontFamily: Fonts.tahoma
+  fontFamilyPrimary: Fonts.roboto,
+  fontFamilySecondary: Fonts.quicksand,
+  bgSidebar: Gradients.sidebar,
+  shadow: Shadows.generalShadow,
+  primaryColor: Colors.orange,
+  shadowRight: Colors.shadowRight
 };

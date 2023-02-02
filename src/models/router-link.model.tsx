@@ -5,4 +5,5 @@ export interface RouterLinkInterface {
     headerText: string;
     headerDescription: string;
     showItem: boolean;
+    icon: any;
 }
