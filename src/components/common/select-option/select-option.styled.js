@@ -1,16 +1,17 @@
 import styled from "styled-components";
 
-export const TextField = styled.input`
+export const SelectField = styled.select`
   background-color: ${({ theme }) => theme.bgMain};
   border: 1px solid #eaeaea;
   box-shadow: none;
   padding: 12px 14px;
   width: 100%;
+  color: ${({ theme }) => theme.textColor};
   margin: 0 20px;
   margin-left: 0;
 
-  &::placeholder {
-    text-transform: capitalize;
+  option {
+    color: ${({ theme }) => theme.textColor};
   }
 `;
 

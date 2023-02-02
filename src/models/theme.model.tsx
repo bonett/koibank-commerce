@@ -2,5 +2,10 @@ export interface CustomThemeInterface {
     body: string;
     bgMain: string;
     textColor: string;
-    fontFamily: string;
+    fontFamilyPrimary: string;
+    fontFamilySecondary: string;
+    bgSidebar: string;
+    shadow: string;
+    primaryColor: string;
+    shadowRight: string;
 }

@@ -10,6 +10,10 @@ const DashboardLayout = () => {
   return <>{outlet}</>
 }
 
+const NoMatch = () => {
+  return <h1>Not Found</h1>
+}
+
 const RoutingPages = () => {
   return (
     <ThemeProvider theme={KoiBankTheme}>
@@ -19,6 +23,7 @@ const RoutingPages = () => {
           <Route element={<DashboardLayout />}>
             <Route path="/" element={<HomePage />} />
           </Route>
+          <Route path="*" element={<NoMatch/>} />
         </Routes>
       </>
     </ThemeProvider>

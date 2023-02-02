@@ -13,11 +13,6 @@ export const MainWrapper = styled.div`
   background-color: ${({ theme }) => theme.bgMain};
   height: 100vh;
   transition: all 0.1s ease;
-  min-width: 860px;
-  overflow-y: scroll;
-  padding: 0 20px;
-
-  @media screen and (min-width: 992px) {
-    width: calc(100vw - 210px);
-  }
+  overflow: auto;
+  width: 100%;
 `;

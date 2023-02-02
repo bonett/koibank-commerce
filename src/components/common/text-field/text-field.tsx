@@ -1,13 +1,22 @@
 import React from 'react'
+import { TextField, FormControl, Label } from './text-field.styled'
+import { TextFieldInterface } from '../../../models/text-field.model';
 
-interface TextFieldInterface {
-    placeholderText: string;
-    handleChange: any
-}
-
-const TextFieldComponent = ({ placeholderText, handleChange }: TextFieldInterface) => {
+const TextFieldComponent = ({ type = 'text', value, placeholderText, handleChange, label }: TextFieldInterface) => {
     return (
-        <input type="text" placeholder={placeholderText} onChange={handleChange} />
+        <FormControl>
+            {
+                label && (
+                    <Label>{label}</Label>
+                )
+            }
+            <TextField
+                type={type}
+                placeholder={placeholderText}
+                onChange={handleChange}
+                value={value}
+            />
+        </FormControl>
     )
 }
 

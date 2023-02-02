@@ -2,8 +2,8 @@ import React from "react";
 import { MainContent, MainWrapper } from "./main-view.styled";
 import Sidebar from "../sidebar";
 import Header from "../header";
-import Footer from "../footer";
 import { RouterLinkInterface } from '../../models/router-link.model'
+import HomeIcon from '../../icons/home';
 
 const MainViewComponent = ({ children }: any) => {
     const routesLinkData: Array<RouterLinkInterface> = [
@@ -14,16 +14,9 @@ const MainViewComponent = ({ children }: any) => {
             headerText: "Welcome Guest",
             headerDescription:
                 "Entérate de cómo interactuan las compañias en la siguiente información",
-            showItem: true
+            showItem: true,
+            icon: () => <HomeIcon color="#fb8019" />,
         },
-        {
-            path: "/about",
-            exact: true,
-            sidebarText: "About",
-            headerText: "Dev Information",
-            headerDescription: "Entérate",
-            showItem: false
-        }
     ];
 
     return (
@@ -32,7 +25,6 @@ const MainViewComponent = ({ children }: any) => {
             <MainWrapper id="main-content">
                 <Header routesLink={routesLinkData} />
                 {children}
-                <Footer />
             </MainWrapper>
         </MainContent>
     );
