@@ -5,20 +5,20 @@ import Header from "../header";
 import { RouterLinkInterface } from '../../models/router-link.model'
 import HomeIcon from '../../icons/home';
 
-const MainViewComponent = ({ children }: any) => {
-    const routesLinkData: Array<RouterLinkInterface> = [
-        {
-            path: "/dashboard",
-            exact: true,
-            sidebarText: "Dashboard",
-            headerText: "Welcome Guest",
-            headerDescription:
-                "Entérate de cómo interactuan las compañias en la siguiente información",
-            showItem: true,
-            icon: () => <HomeIcon color="#fb8019" />,
-        },
-    ];
+export const routesLinkData: Array<RouterLinkInterface> = [
+    {
+        path: "/dashboard",
+        exact: true,
+        sidebarText: "Dashboard",
+        headerText: "Welcome Guest",
+        headerDescription:
+            "Entérate de cómo interactuan las compañias en la siguiente información",
+        showItem: true,
+        icon: () => <HomeIcon color="#fb8019" />,
+    },
+];
 
+const MainViewComponent = ({ children }: any) => {
     return (
         <MainContent>
             <Sidebar routesLink={routesLinkData} />
